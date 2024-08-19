@@ -64,26 +64,33 @@ quiz_data = [
      "answer": "To expand Tableau's user community in Europe"}
 ]
 
-# Initialize session state variables if not already initialized
-if 'question_index' not in st.session_state:
-    st.session_state.question_index = 0
-    st.session_state.score = 0
+# Use session state to store answers
+if 'answers' not in st.session_state:
+    st.session_state.answers = [None] * len(quiz_data)
 
-def handle_answer(answer, correct_answer):
-    if answer == correct_answer:
-        st.session_state.score += 1
-    st.session_state.question_index += 1
+def check_answers():
+    correct_count = 0
+    result_list = []
+    for idx, q in enumerate(quiz_data):
+        user_answer = st.session_state.answers[idx]
+        if user_answer == q['answer']:
+            result = "Correct"
+            correct_count += 1
+        else:
+            result = f"Incorrect, the correct answer is: {q['answer']}"
+        result_list.append((q['question'], result))
+    return result_list, correct_count
 
-# Display current question
-if st.session_state.question_index < len(quiz_data):
-    question = quiz_data[st.session_state.question_index]
-    st.write(f"Question {st.session_state.question_index + 1}: {question['question']}")
-    options = question['options']
-    answer = st.radio("Select an option:", options)
-    if st.button("Submit"):
-        handle_answer(answer, question['answer'])
-else:
-    st.write(f"Quiz completed! Your score is {st.session_state.score} out of {len(quiz_data)}")
-    if st.button("Restart quiz"):
-        st.session_state.question_index = 0
-        st.session_state.score = 0
+# Display quiz questions and options
+st.title("Tableau Event Quiz")
+for idx, question in enumerate(quiz_data):
+    q_text = f"Question {idx + 1}: {question['question']}"
+    option = st.selectbox(q_text, ["Select an answer..."] + question['options'], key=f'q{idx}')
+    st.session_state.answers[idx] = option
+
+# Submit button to check answers
+if st.button("Submit Answers"):
+    results, score = check_answers()
+    st.write(f"Your score is {score} out of {len(quiz_data)}")
+    for res in results:
+        st.write(f"{res[0]} - {res[1]}")
