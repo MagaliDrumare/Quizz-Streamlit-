@@ -82,7 +82,7 @@ def check_answers():
     return result_list, correct_count
 
 # Display quiz questions and options
-st.title(" Future of Tableau Quizz")
+st.title(" Future of Tableau Quiz")
 for idx, question in enumerate(quiz_data):
     q_text = f"Question {idx + 1}: {question['question']}"
     option = st.selectbox(q_text, ["Select an answer..."] + question['options'], key=f'q{idx}')
