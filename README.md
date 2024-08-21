@@ -10,7 +10,7 @@
 - access : https://h7sedmrabypliceppiqkkk.streamlit.app/
 
 ### Google Generative AI Quiz : 
-- access : 
+- access : https://gzbcubwb6nysmmqxb6ugqs.streamlit.app/
 
 ### Microsoft Generative AI Quiz : 
 - access : https://lngadusrcgvt6tblvtzdxg.streamlit.app/
