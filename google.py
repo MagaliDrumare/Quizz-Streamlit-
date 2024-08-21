@@ -2,85 +2,85 @@ import streamlit as st
 
 # Questions and choices
 questions = {
-    "What is the primary design goal of Gemma compared to Gemini?": [
-        "Gemma focuses on language model efficiency, while Gemini targets a broader application integration.",
-        "Gemma is designed for high-performance computing, Gemini for mobile devices.",
-        "Gemma supports only NLP tasks, while Gemini is multi-functional.",
-        "Gemma is proprietary, whereas Gemini is open-source."
+    "What is Gemma primarily known for in the realm of AI?": [
+        "Its integration into mobile devices",
+        "Being a lightweight, state-of-the-art open model",
+        "Enhancing Google Search and Gmail only",
+        "A proprietary model exclusive to Google"
     ],
-    "Which model is integrated into Google’s mobile applications like Gmail and Docs?": [
-        "Gemma",
-        "Gemini",
-        "Both Gemma and Gemini",
-        "Neither"
+    "What significant feature does Gemma 2 introduce?": [
+        "New token-based pricing model",
+        "Multiple sizes with significant token training",
+        "Decreased model performance",
+        "Only cloud-based deployment"
     ],
-    "How does the size of the models in Gemma compare to those in Gemini?": [
-        "Gemma models are larger.",
-        "Gemini models are larger.",
-        "Both have similar sizes.",
-        "The size is undisclosed."
+    "How does Gemma's pre-training process contribute to its functionality?": [
+        "It allows for domain-specific fine-tuning",
+        "It focuses solely on sentiment analysis",
+        "It only uses supervised learning techniques",
+        "None of the above"
     ],
-    "Which model emphasizes user experience enhancements across various Google applications?": [
-        "Gemma",
-        "Gemini",
-        "Both equally",
-        "Neither specifically"
+    "What is the purpose of Google's Gemini model?": [
+        "To serve as Google's primary cloud computing service",
+        "To enhance user experience across various applications",
+        "To provide security services across Google platforms",
+        "To act as a standalone product for data analytics"
     ],
-    "What type of AI model architecture is primarily used in Gemma that differs from Gemini?": [
-        "Transformers",
-        "Recurrent Neural Networks",
-        "Convolutional Neural Networks",
-        "Mixture of Experts"
+    "What capabilities does Gemma 2 27B model boast?": [
+        "Approaches the performance of Meta Llama 3 70B",
+        "Limited to basic NLP tasks",
+        "Only supports English language processing",
+        "Offers reduced accuracy for quicker processing"
     ],
-    "How does the training data volume for Gemma 2’s largest model compare to that used for Gemini?": [
-        "Gemma 2 uses more data.",
-        "Gemini uses more data.",
-        "They use the same amount of data.",
-        "Data usage is not comparable due to different applications."
+    "Where can one find demonstrations of Gemma 2 in action?": [
+        "On Google’s main website",
+        "Huggingface Spaces",
+        "Official Google Play Store",
+        "Google's physical retail stores"
     ],
-    "In terms of deployment, how does Gemma’s open model nature compare to Gemini’s application?": [
-        "Gemma is open for public modification, Gemini is not.",
-        "Gemini is open-source, Gemma is not.",
-        "Both are completely proprietary.",
-        "Both models are open to the public."
+    "What does the integration of Gemini into mobile devices aim to improve?": [
+        "Battery life of devices",
+        "Overall user experience",
+        "Storage capacity of devices",
+        "Physical durability of mobile devices"
     ],
-    "What training approach is uniquely emphasized in Gemma that is less pronounced in Gemini?": [
-        "Self-supervised learning",
-        "Supervised learning",
-        "Reinforcement learning",
-        "Unsupervised learning"
+    "What type of tasks is Gemma effective at due to its pre-training and fine-tuning stages?": [
+        "Image processing",
+        "Variety of NLP tasks",
+        "Hardware optimization",
+        "Web development"
     ],
-    "How do Gemma and Gemini models differ in their handling of multiple languages?": [
-        "Gemma supports more languages.",
-        "Gemini supports more languages.",
-        "Both support an equal number of languages.",
-        "Language support is not a focus for either model."
+    "What is a feature of Vertex AI in relation to Gemini?": [
+        "It is a gaming platform",
+        "It integrates AI models into Google's cloud services",
+        "It is a new messaging service",
+        "It provides hardware for AI computation"
     ],
-    "Which model is specifically noted for its application in enhancing Android operating system functionalities?": [
-        "Gemma",
-        "Gemini",
-        "Both",
-        "Neither"
+    "How can developers explore and experiment with Gemini models?": [
+        "Through Google Maps",
+        "By participating in exclusive webinars",
+        "Via Google Colab notebooks",
+        "By visiting Google's headquarters"
     ]
 }
 
 # Correct answers
 correct_answers = {
-    "What is the primary design goal of Gemma compared to Gemini?": "Gemma focuses on language model efficiency, while Gemini targets a broader application integration.",
-    "Which model is integrated into Google’s mobile applications like Gmail and Docs?": "Gemini",
-    "How does the size of the models in Gemma compare to those in Gemini?": "Gemma models are larger.",
-    "Which model emphasizes user experience enhancements across various Google applications?": "Gemini",
-    "What type of AI model architecture is primarily used in Gemma that differs from Gemini?": "Transformers",
-    "How does the training data volume for Gemma 2’s largest model compare to that used for Gemini?": "Gemma 2 uses more data.",
-    "In terms of deployment, how does Gemma’s open model nature compare to Gemini’s application?": "Gemma is open for public modification, Gemini is not.",
-    "What training approach is uniquely emphasized in Gemma that is less pronounced in Gemini?": "Self-supervised learning",
-    "How do Gemma and Gemini models differ in their handling of multiple languages?": "Gemma supports more languages.",
-    "Which model is specifically noted for its application in enhancing Android operating system functionalities?": "Gemini"
+    "What is Gemma primarily known for in the realm of AI?": "Being a lightweight, state-of-the-art open model",
+    "What significant feature does Gemma 2 introduce?": "Multiple sizes with significant token training",
+    "How does Gemma's pre-training process contribute to its functionality?": "It allows for domain-specific fine-tuning",
+    "What is the purpose of Google's Gemini model?": "To enhance user experience across various applications",
+    "What capabilities does Gemma 2 27B model boast?": "Approaches the performance of Meta Llama 3 70B",
+    "Where can one find demonstrations of Gemma 2 in action?": "Huggingface Spaces",
+    "What does the integration of Gemini into mobile devices aim to improve?": "Overall user experience",
+    "What type of tasks is Gemma effective at due to its pre-training and fine-tuning stages?": "Variety of NLP tasks",
+    "What is a feature of Vertex AI in relation to Gemini?": "It integrates AI models into Google's cloud services",
+    "How can developers explore and experiment with Gemini models?": "Via Google Colab notebooks"
 }
 
 # Streamlit user interface
 def main():
-    st.title("Google Gemma vs. Gemini Quiz")
+    st.title("Google Generative AI Quiz")
 
     # User responses
     user_answers = {}
