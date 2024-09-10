@@ -15,6 +15,9 @@
 ### Microsoft Generative AI Quiz : 
 - access : https://lngadusrcgvt6tblvtzdxg.streamlit.app/
 
+### Salesforce Generative AI Quizz : 
+- access : 
+
 ### Future of Tableau Quiz 
 - creation : https://chatgpt.com/share/98d352b7-bdcb-400e-8e03-186143b90d6f
 - access : https://bw6w6tgqfwxr8p7gqfmedk.streamlit.app/
